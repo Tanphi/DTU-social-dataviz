@@ -250,30 +250,9 @@
 
 		<script type="text/javascript">
 			
-			var dataset2G = {first:[ { key: 0, value: 5 },		//dataset is now an array of objects.
-							{ key: 1, value: 10 },		//Each object has a 'key' and a 'value'.
-							{ key: 2, value: 13 },
-							{ key: 3, value: 19 },
-							{ key: 4, value: 21 },
-							{ key: 5, value: 25 },
-							{ key: 6, value: 22 },
-							{ key: 7, value: 18 },
-							{ key: 8, value: 15 },
-							{ key: 9, value: 13 }],
-							second:
-							[{ key: 10, value: 11 },
-							{ key: 11, value: 12 },
-							{ key: 12, value: 15 },
-							{ key: 13, value: 20 },
-							{ key: 14, value: 18 },
-							{ key: 15, value: 30 },
-							{ key: 16, value: 16 },
-							{ key: 17, value: 18 },
-							{ key: 18, value: 23 },
-							{ key: 19, value: 25 } ]};
+			var dataset2G = JSON.parse(readTextFile("data2C.json"));
 							
-
-			var dataset2 = dataset2G.first;
+			var dataset2 = dataset2G.PROSTITUTION;
 			
 			var xScale2 = d3.scale.ordinal()
 							.domain(d3.range(dataset2.length))
@@ -281,7 +260,7 @@
 							
 							
 			var yScale2 = d3.scale.linear()
-							.domain([0, d3.max(dataset2, function(d) { return d.value; })])
+							.domain([0, d3.max(dataset2, function(d) { return d.nCrime; })])
 							.range([padding,h - padding]);
 										
 			//Define X axis
@@ -305,43 +284,42 @@
 				   
 			
 			//Define key function, to be used when binding data
-			var key = function(d) {
-				return d.key;
+			var hour = function(d) {
+				return d.hour;
 			};
-			
 			
 			//Create bars
 			svg2.selectAll("rect")
-			   .data(dataset2, key)
+			   .data(dataset2, hour)
 			   .enter()
 			   .append("rect")
 			   .attr("x", function(d, i) {
 			   		return xScale2(i);
 			   })
 			   .attr("y", function(d) {
-			   		return h - yScale2(d.value) - padding;
+			   		return h - yScale2(d.nCrime) - padding;
 			   })
 			   .attr("width", xScale2.rangeBand())
 			   .attr("height", function(d) {
-			   		return yScale2(d.value);
+			   		return yScale2(d.nCrime);
 			   })
 			   .attr("fill", function(d) {
-					return "rgb(0, 0, " + (d.value * 10) + ")";
+					return "rgb(0, 0, " + yScale2(d.nCrime) + ")";
 			   });
 			//Create labels
 			svg2.selectAll("text")
-			   .data(dataset2, key)
+			   .data(dataset2, hour)
 			   .enter()
 			   .append("text")
 			   .text(function(d) {
-			   		return d.value;
+			   		return d.nCrime;
 			   })
 			   .attr("text-anchor", "middle")
 			   .attr("x", function(d, i) {
 			   		return xScale2(i) + xScale2.rangeBand() / 2;
 			   })
 			   .attr("y", function(d) {
-			   		return h - padding - yScale2(d.value) + 14;
+			   		return h - padding - yScale2(d.nCrime) + 14;
 			   })
 			   .attr("font-family", "sans-serif")
 			   .attr("font-size", "11px")
@@ -352,27 +330,26 @@
 			//Update the rect and the texts	
 			function Update2(){
 					//Update scale domains
-					//xScale2.domain(d3.range(dataset2.length));
-					yScale2.domain([0, d3.max(dataset2, function(d) { return d.value; })]);
+					yScale2.domain([0, d3.max(dataset2, function(d) { return d.nCrime; })]);
 					
 					//xAxis2 = d3.svg.axis().scale(xScale2);
 					//Select…
 					var bars = svg2.selectAll("rect")
-						.data(dataset2, key);
+						.data(dataset2, hour);
 					
 					//Enter…
 					bars.enter()
 						.append("rect")
 						.attr("x",w)
 						.attr("y", function(d) {
-							return h - yScale2(d.value) - 3 * padding;
+							return h - yScale2(d.nCrime) -  padding;
 						})
 						.attr("width", xScale2.rangeBand())
 						.attr("height", function(d) {
-							return yScale2(d.value);
+							return yScale2(d.nCrime);
 						})
 						.attr("fill", function(d) {
-							return "rgb(0, 0, " + (d.value * 10) + ")";
+							return "rgb(0, 0, " + (d.nCrime * 10) + ")";
 						});
 					//Update…
 					bars.transition()
@@ -381,12 +358,15 @@
 							return xScale2(i);
 						})
 						.attr("y", function(d) {
-							return h - yScale2(d.value) -  3 * padding;
+							return h - yScale2(d.nCrime) -  padding;
 						})
 						.attr("width", xScale2.rangeBand())
 						.attr("height", function(d) {
-							return yScale2(d.value);
-						});
+							return yScale2(d.nCrime);
+						})
+						.attr("fill", function(d) {
+							return "rgb(0, 0, " + yScale2(d.nCrime) + ")";
+					   });
 					//Exit…
 					bars.exit()
 						.transition()
@@ -397,20 +377,20 @@
 					
 					//Update all labels
 					var texts = svg2.selectAll("text")
-						.data(dataset2, key);
+						.data(dataset2, hour);
 					
 					//Enter…
 					texts.enter()
 						.append("text")
 						.text(function(d) {
-					   		return d.value;
+					   		return d.nCrime;
 					   })
 					   .attr("text-anchor", "middle")
 					   .attr("x", function(d, i) {
 							return w ;
 					   })
 					   .attr("y", function(d) {
-							return h - yScale2(d.value) - 3 * padding ;
+							return h - yScale2(d.nCrime) - padding ;
 					   })
 					   .attr("font-family", "sans-serif")
 					   .attr("font-size", "11px")
@@ -422,12 +402,12 @@
 							return xScale2(i)  + xScale2.rangeBand() /2;
 						})
 						.attr("y", function(d) {
-							return h - yScale2(d.value) + 14 - 3 * padding;
+							return h - yScale2(d.nCrime) + 14 - padding;
 						});
 					//Exit…
 					texts.exit()
-						.transition()
-						.duration(500)
+						//.transition()
+						//.duration(500)
 						.attr("x", -xScale2.rangeBand())
 						.remove();
 						
@@ -440,23 +420,59 @@
 			function choice(typeForm){
 				var i = typeForm.box1.selectedIndex;
 				switch(i){
-					case 0:
-						dataset2 = dataset2G.first;
-						Update2();
-						break;
-					case 1:
-						dataset2 = dataset2G.second;
-						Update2();
-						break;
+				case 0:
+					dataset2 = dataset2G.PROSTITUTION;
+					break;
+				case 1:
+					dataset2 = dataset2G.WEAPON;
+					break;
+				case 2:
+					dataset2 = dataset2G.DRIVING;
+					break;
+				case 3:
+					dataset2 = dataset2G.ROBBERY;
+					break;
+				case 4:
+					dataset2 = dataset2G.BURGLARY;
+					break;
+				case 5:
+					dataset2 = dataset2G.ASSAULT;
+					break;
+				case 6:
+					dataset2 = dataset2G.DRUG;
+					break;
+				case 7:
+					dataset2 = dataset2G.TRESPASS;
+					break;
+				case 8:
+					dataset2 = dataset2G.VEHICLE;
+					break;
+				case 9:
+					dataset2 = dataset2G.STOLEN;
+					break;
+				case 10:
+					dataset2 = dataset2G.DISORDER;
+					break;
 				}
+				
+				Update2();
 			}
 		
 		</script>
 		<p></p>
 		<form name="typeForm">
 		<select name="box1" onChange="choice(this.form)">
-		<option selected>First</option>
-		<option>Second</option>
+		<option selected>PROSTITUTION</option>
+		<option>WEAPON LAWS</option>
+		<option>DRIVING UNDER THE INFLUENCE</option>
+		<option>ROBBERY</option>
+		<option>BURGLARY</option>
+		<option>ASSAULT</option>
+		<option>DRUG</option>
+		<option>TRESPASS</option>
+		<option>VEHICLE THEFT</option>
+		<option>STOLEN PROPERTY</option>
+		<option>DISORDERLY CONDUCT</option>
 		</select>
 		</form>
 		

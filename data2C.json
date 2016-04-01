@@ -1,0 +1,1093 @@
+{"WEAPON":
+[
+  {
+    "hour": 0,
+    "nCrime": 941
+  },
+  {
+    "hour": 1,
+    "nCrime": 684
+  },
+  {
+    "hour": 2,
+    "nCrime": 621
+  },
+  {
+    "hour": 3,
+    "nCrime": 353
+  },
+  {
+    "hour": 4,
+    "nCrime": 253
+  },
+  {
+    "hour": 5,
+    "nCrime": 142
+  },
+  {
+    "hour": 6,
+    "nCrime": 209
+  },
+  {
+    "hour": 7,
+    "nCrime": 358
+  },
+  {
+    "hour": 8,
+    "nCrime": 508
+  },
+  {
+    "hour": 9,
+    "nCrime": 662
+  },
+  {
+    "hour": 10,
+    "nCrime": 670
+  },
+  {
+    "hour": 11,
+    "nCrime": 789
+  },
+  {
+    "hour": 12,
+    "nCrime": 916
+  },
+  {
+    "hour": 13,
+    "nCrime": 899
+  },
+  {
+    "hour": 14,
+    "nCrime": 907
+  },
+  {
+    "hour": 15,
+    "nCrime": 1022
+  },
+  {
+    "hour": 16,
+    "nCrime": 1102
+  },
+  {
+    "hour": 17,
+    "nCrime": 1057
+  },
+  {
+    "hour": 18,
+    "nCrime": 1150
+  },
+  {
+    "hour": 19,
+    "nCrime": 1055
+  },
+  {
+    "hour": 20,
+    "nCrime": 1001
+  },
+  {
+    "hour": 21,
+    "nCrime": 984
+  },
+  {
+    "hour": 22,
+    "nCrime": 1076
+  },
+  {
+    "hour": 23,
+    "nCrime": 1004
+  }
+]
+
+,"PROSTITUTION":
+[
+  {
+    "hour": 0,
+    "nCrime": 941
+  },
+  {
+    "hour": 1,
+    "nCrime": 684
+  },
+  {
+    "hour": 2,
+    "nCrime": 621
+  },
+  {
+    "hour": 3,
+    "nCrime": 353
+  },
+  {
+    "hour": 4,
+    "nCrime": 253
+  },
+  {
+    "hour": 5,
+    "nCrime": 142
+  },
+  {
+    "hour": 6,
+    "nCrime": 209
+  },
+  {
+    "hour": 7,
+    "nCrime": 358
+  },
+  {
+    "hour": 8,
+    "nCrime": 508
+  },
+  {
+    "hour": 9,
+    "nCrime": 662
+  },
+  {
+    "hour": 10,
+    "nCrime": 670
+  },
+  {
+    "hour": 11,
+    "nCrime": 789
+  },
+  {
+    "hour": 12,
+    "nCrime": 916
+  },
+  {
+    "hour": 13,
+    "nCrime": 899
+  },
+  {
+    "hour": 14,
+    "nCrime": 907
+  },
+  {
+    "hour": 15,
+    "nCrime": 1022
+  },
+  {
+    "hour": 16,
+    "nCrime": 1102
+  },
+  {
+    "hour": 17,
+    "nCrime": 1057
+  },
+  {
+    "hour": 18,
+    "nCrime": 1150
+  },
+  {
+    "hour": 19,
+    "nCrime": 1055
+  },
+  {
+    "hour": 20,
+    "nCrime": 1001
+  },
+  {
+    "hour": 21,
+    "nCrime": 984
+  },
+  {
+    "hour": 22,
+    "nCrime": 1076
+  },
+  {
+    "hour": 23,
+    "nCrime": 1004
+  }
+]
+,"DRIVING":
+[
+  {
+    "hour": 0,
+    "nCrime": 644
+  },
+  {
+    "hour": 1,
+    "nCrime": 595
+  },
+  {
+    "hour": 2,
+    "nCrime": 586
+  },
+  {
+    "hour": 3,
+    "nCrime": 250
+  },
+  {
+    "hour": 4,
+    "nCrime": 99
+  },
+  {
+    "hour": 5,
+    "nCrime": 51
+  },
+  {
+    "hour": 6,
+    "nCrime": 56
+  },
+  {
+    "hour": 7,
+    "nCrime": 36
+  },
+  {
+    "hour": 8,
+    "nCrime": 42
+  },
+  {
+    "hour": 9,
+    "nCrime": 41
+  },
+  {
+    "hour": 10,
+    "nCrime": 19
+  },
+  {
+    "hour": 11,
+    "nCrime": 39
+  },
+  {
+    "hour": 12,
+    "nCrime": 48
+  },
+  {
+    "hour": 13,
+    "nCrime": 53
+  },
+  {
+    "hour": 14,
+    "nCrime": 62
+  },
+  {
+    "hour": 15,
+    "nCrime": 78
+  },
+  {
+    "hour": 16,
+    "nCrime": 113
+  },
+  {
+    "hour": 17,
+    "nCrime": 152
+  },
+  {
+    "hour": 18,
+    "nCrime": 162
+  },
+  {
+    "hour": 19,
+    "nCrime": 217
+  },
+  {
+    "hour": 20,
+    "nCrime": 238
+  },
+  {
+    "hour": 21,
+    "nCrime": 325
+  },
+  {
+    "hour": 22,
+    "nCrime": 445
+  },
+  {
+    "hour": 23,
+    "nCrime": 567
+  }
+]
+
+,"ROBBERY":
+[
+  {
+    "hour": 0,
+    "nCrime": 2637
+  },
+  {
+    "hour": 1,
+    "nCrime": 2663
+  },
+  {
+    "hour": 2,
+    "nCrime": 2820
+  },
+  {
+    "hour": 3,
+    "nCrime": 1698
+  },
+  {
+    "hour": 4,
+    "nCrime": 1090
+  },
+  {
+    "hour": 5,
+    "nCrime": 942
+  },
+  {
+    "hour": 6,
+    "nCrime": 905
+  },
+  {
+    "hour": 7,
+    "nCrime": 816
+  },
+  {
+    "hour": 8,
+    "nCrime": 930
+  },
+  {
+    "hour": 9,
+    "nCrime": 1092
+  },
+  {
+    "hour": 10,
+    "nCrime": 1233
+  },
+  {
+    "hour": 11,
+    "nCrime": 1370
+  },
+  {
+    "hour": 12,
+    "nCrime": 1662
+  },
+  {
+    "hour": 13,
+    "nCrime": 1793
+  },
+  {
+    "hour": 14,
+    "nCrime": 1890
+  },
+  {
+    "hour": 15,
+    "nCrime": 2166
+  },
+  {
+    "hour": 16,
+    "nCrime": 2399
+  },
+  {
+    "hour": 17,
+    "nCrime": 2338
+  },
+  {
+    "hour": 18,
+    "nCrime": 2459
+  },
+  {
+    "hour": 19,
+    "nCrime": 2657
+  },
+  {
+    "hour": 20,
+    "nCrime": 2980
+  },
+  {
+    "hour": 21,
+    "nCrime": 3382
+  },
+  {
+    "hour": 22,
+    "nCrime": 3364
+  },
+  {
+    "hour": 23,
+    "nCrime": 3122
+  }
+]
+,"BURGLARY":
+[
+  {
+    "hour": 0,
+    "nCrime": 2908
+  },
+  {
+    "hour": 1,
+    "nCrime": 1865
+  },
+  {
+    "hour": 2,
+    "nCrime": 1961
+  },
+  {
+    "hour": 3,
+    "nCrime": 1943
+  },
+  {
+    "hour": 4,
+    "nCrime": 1699
+  },
+  {
+    "hour": 5,
+    "nCrime": 1581
+  },
+  {
+    "hour": 6,
+    "nCrime": 1725
+  },
+  {
+    "hour": 7,
+    "nCrime": 2786
+  },
+  {
+    "hour": 8,
+    "nCrime": 4398
+  },
+  {
+    "hour": 9,
+    "nCrime": 3802
+  },
+  {
+    "hour": 10,
+    "nCrime": 3478
+  },
+  {
+    "hour": 11,
+    "nCrime": 3307
+  },
+  {
+    "hour": 12,
+    "nCrime": 4440
+  },
+  {
+    "hour": 13,
+    "nCrime": 2921
+  },
+  {
+    "hour": 14,
+    "nCrime": 3207
+  },
+  {
+    "hour": 15,
+    "nCrime": 3731
+  },
+  {
+    "hour": 16,
+    "nCrime": 4108
+  },
+  {
+    "hour": 17,
+    "nCrime": 5510
+  },
+  {
+    "hour": 18,
+    "nCrime": 5522
+  },
+  {
+    "hour": 19,
+    "nCrime": 4085
+  },
+  {
+    "hour": 20,
+    "nCrime": 3576
+  },
+  {
+    "hour": 21,
+    "nCrime": 3436
+  },
+  {
+    "hour": 22,
+    "nCrime": 3229
+  },
+  {
+    "hour": 23,
+    "nCrime": 3037
+  }
+]
+,"ASSAULT":
+	[
+	  {
+		"hour": 0,
+		"nCrime": 9334
+	  },
+	  {
+		"hour": 1,
+		"nCrime": 8031
+	  },
+	  {
+		"hour": 2,
+		"nCrime": 7287
+	  },
+	  {
+		"hour": 3,
+		"nCrime": 3622
+	  },
+	  {
+		"hour": 4,
+		"nCrime": 2257
+	  },
+	  {
+		"hour": 5,
+		"nCrime": 1795
+	  },
+	  {
+		"hour": 6,
+		"nCrime": 2361
+	  },
+	  {
+		"hour": 7,
+		"nCrime": 3475
+	  },
+	  {
+		"hour": 8,
+		"nCrime": 5478
+	  },
+	  {
+		"hour": 9,
+		"nCrime": 6006
+	  },
+	  {
+		"hour": 10,
+		"nCrime": 6680
+	  },
+	  {
+		"hour": 11,
+		"nCrime": 7089
+	  },
+	  {
+		"hour": 12,
+		"nCrime": 8942
+	  },
+	  {
+		"hour": 13,
+		"nCrime": 7720
+	  },
+	  {
+		"hour": 14,
+		"nCrime": 7812
+	  },
+	  {
+		"hour": 15,
+		"nCrime": 8718
+	  },
+	  {
+		"hour": 16,
+		"nCrime": 8513
+	  },
+	  {
+		"hour": 17,
+		"nCrime": 8713
+	  },
+	  {
+		"hour": 18,
+		"nCrime": 8643
+	  },
+	  {
+		"hour": 19,
+		"nCrime": 8384
+	  },
+	  {
+		"hour": 20,
+		"nCrime": 8258
+	  },
+	  {
+		"hour": 21,
+		"nCrime": 8570
+	  },
+	  {
+		"hour": 22,
+		"nCrime": 8322
+	  },
+	  {
+		"hour": 23,
+		"nCrime": 7911
+	  }
+	]
+
+,"DRUG":
+[
+  {
+    "hour": 0,
+    "nCrime": 3483
+  },
+  {
+    "hour": 1,
+    "nCrime": 2128
+  },
+  {
+    "hour": 2,
+    "nCrime": 1708
+  },
+  {
+    "hour": 3,
+    "nCrime": 1128
+  },
+  {
+    "hour": 4,
+    "nCrime": 838
+  },
+  {
+    "hour": 5,
+    "nCrime": 422
+  },
+  {
+    "hour": 6,
+    "nCrime": 1185
+  },
+  {
+    "hour": 7,
+    "nCrime": 2745
+  },
+  {
+    "hour": 8,
+    "nCrime": 3671
+  },
+  {
+    "hour": 9,
+    "nCrime": 4345
+  },
+  {
+    "hour": 10,
+    "nCrime": 4928
+  },
+  {
+    "hour": 11,
+    "nCrime": 5464
+  },
+  {
+    "hour": 12,
+    "nCrime": 5638
+  },
+  {
+    "hour": 13,
+    "nCrime": 7367
+  },
+  {
+    "hour": 14,
+    "nCrime": 8473
+  },
+  {
+    "hour": 15,
+    "nCrime": 7743
+  },
+  {
+    "hour": 16,
+    "nCrime": 8089
+  },
+  {
+    "hour": 17,
+    "nCrime": 8315
+  },
+  {
+    "hour": 18,
+    "nCrime": 7446
+  },
+  {
+    "hour": 19,
+    "nCrime": 6338
+  },
+  {
+    "hour": 20,
+    "nCrime": 4880
+  },
+  {
+    "hour": 21,
+    "nCrime": 4587
+  },
+  {
+    "hour": 22,
+    "nCrime": 5415
+  },
+  {
+    "hour": 23,
+    "nCrime": 4617
+  }
+]
+,"TRESPASS":
+[
+  {
+    "hour": 0,
+    "nCrime": 467
+  },
+  {
+    "hour": 1,
+    "nCrime": 334
+  },
+  {
+    "hour": 2,
+    "nCrime": 354
+  },
+  {
+    "hour": 3,
+    "nCrime": 296
+  },
+  {
+    "hour": 4,
+    "nCrime": 206
+  },
+  {
+    "hour": 5,
+    "nCrime": 435
+  },
+  {
+    "hour": 6,
+    "nCrime": 961
+  },
+  {
+    "hour": 7,
+    "nCrime": 966
+  },
+  {
+    "hour": 8,
+    "nCrime": 925
+  },
+  {
+    "hour": 9,
+    "nCrime": 840
+  },
+  {
+    "hour": 10,
+    "nCrime": 848
+  },
+  {
+    "hour": 11,
+    "nCrime": 793
+  },
+  {
+    "hour": 12,
+    "nCrime": 853
+  },
+  {
+    "hour": 13,
+    "nCrime": 827
+  },
+  {
+    "hour": 14,
+    "nCrime": 725
+  },
+  {
+    "hour": 15,
+    "nCrime": 785
+  },
+  {
+    "hour": 16,
+    "nCrime": 745
+  },
+  {
+    "hour": 17,
+    "nCrime": 767
+  },
+  {
+    "hour": 18,
+    "nCrime": 712
+  },
+  {
+    "hour": 19,
+    "nCrime": 641
+  },
+  {
+    "hour": 20,
+    "nCrime": 612
+  },
+  {
+    "hour": 21,
+    "nCrime": 604
+  },
+  {
+    "hour": 22,
+    "nCrime": 509
+  },
+  {
+    "hour": 23,
+    "nCrime": 433
+  }
+]
+,"VEHICLE THEFT":
+[
+  {
+    "hour": 0,
+    "nCrime": 4288
+  },
+  {
+    "hour": 1,
+    "nCrime": 2949
+  },
+  {
+    "hour": 2,
+    "nCrime": 2362
+  },
+  {
+    "hour": 3,
+    "nCrime": 1445
+  },
+  {
+    "hour": 4,
+    "nCrime": 1103
+  },
+  {
+    "hour": 5,
+    "nCrime": 1111
+  },
+  {
+    "hour": 6,
+    "nCrime": 1589
+  },
+  {
+    "hour": 7,
+    "nCrime": 2838
+  },
+  {
+    "hour": 8,
+    "nCrime": 4059
+  },
+  {
+    "hour": 9,
+    "nCrime": 3970
+  },
+  {
+    "hour": 10,
+    "nCrime": 3699
+  },
+  {
+    "hour": 11,
+    "nCrime": 3320
+  },
+  {
+    "hour": 12,
+    "nCrime": 4876
+  },
+  {
+    "hour": 13,
+    "nCrime": 3486
+  },
+  {
+    "hour": 14,
+    "nCrime": 4078
+  },
+  {
+    "hour": 15,
+    "nCrime": 4811
+  },
+  {
+    "hour": 16,
+    "nCrime": 5697
+  },
+  {
+    "hour": 17,
+    "nCrime": 7571
+  },
+  {
+    "hour": 18,
+    "nCrime": 9245
+  },
+  {
+    "hour": 19,
+    "nCrime": 8084
+  },
+  {
+    "hour": 20,
+    "nCrime": 8434
+  },
+  {
+    "hour": 21,
+    "nCrime": 8243
+  },
+  {
+    "hour": 22,
+    "nCrime": 8669
+  },
+  {
+    "hour": 23,
+    "nCrime": 7595
+  }
+]
+,"STOLEN":
+[
+  {
+    "hour": 0,
+    "nCrime": 481
+  },
+  {
+    "hour": 1,
+    "nCrime": 345
+  },
+  {
+    "hour": 2,
+    "nCrime": 278
+  },
+  {
+    "hour": 3,
+    "nCrime": 208
+  },
+  {
+    "hour": 4,
+    "nCrime": 193
+  },
+  {
+    "hour": 5,
+    "nCrime": 152
+  },
+  {
+    "hour": 6,
+    "nCrime": 156
+  },
+  {
+    "hour": 7,
+    "nCrime": 243
+  },
+  {
+    "hour": 8,
+    "nCrime": 309
+  },
+  {
+    "hour": 9,
+    "nCrime": 340
+  },
+  {
+    "hour": 10,
+    "nCrime": 370
+  },
+  {
+    "hour": 11,
+    "nCrime": 445
+  },
+  {
+    "hour": 12,
+    "nCrime": 561
+  },
+  {
+    "hour": 13,
+    "nCrime": 532
+  },
+  {
+    "hour": 14,
+    "nCrime": 570
+  },
+  {
+    "hour": 15,
+    "nCrime": 620
+  },
+  {
+    "hour": 16,
+    "nCrime": 645
+  },
+  {
+    "hour": 17,
+    "nCrime": 643
+  },
+  {
+    "hour": 18,
+    "nCrime": 624
+  },
+  {
+    "hour": 19,
+    "nCrime": 503
+  },
+  {
+    "hour": 20,
+    "nCrime": 488
+  },
+  {
+    "hour": 21,
+    "nCrime": 418
+  },
+  {
+    "hour": 22,
+    "nCrime": 456
+  },
+  {
+    "hour": 23,
+    "nCrime": 424
+  }
+]
+,"DISORDER":
+[
+  {
+    "hour": 0,
+    "nCrime": 485
+  },
+  {
+    "hour": 1,
+    "nCrime": 357
+  },
+  {
+    "hour": 2,
+    "nCrime": 317
+  },
+  {
+    "hour": 3,
+    "nCrime": 208
+  },
+  {
+    "hour": 4,
+    "nCrime": 140
+  },
+  {
+    "hour": 5,
+    "nCrime": 352
+  },
+  {
+    "hour": 6,
+    "nCrime": 888
+  },
+  {
+    "hour": 7,
+    "nCrime": 734
+  },
+  {
+    "hour": 8,
+    "nCrime": 573
+  },
+  {
+    "hour": 9,
+    "nCrime": 433
+  },
+  {
+    "hour": 10,
+    "nCrime": 384
+  },
+  {
+    "hour": 11,
+    "nCrime": 361
+  },
+  {
+    "hour": 12,
+    "nCrime": 371
+  },
+  {
+    "hour": 13,
+    "nCrime": 359
+  },
+  {
+    "hour": 14,
+    "nCrime": 321
+  },
+  {
+    "hour": 15,
+    "nCrime": 310
+  },
+  {
+    "hour": 16,
+    "nCrime": 280
+  },
+  {
+    "hour": 17,
+    "nCrime": 276
+  },
+  {
+    "hour": 18,
+    "nCrime": 297
+  },
+  {
+    "hour": 19,
+    "nCrime": 247
+  },
+  {
+    "hour": 20,
+    "nCrime": 230
+  },
+  {
+    "hour": 21,
+    "nCrime": 267
+  },
+  {
+    "hour": 22,
+    "nCrime": 356
+  },
+  {
+    "hour": 23,
+    "nCrime": 388
+  }
+]
+}
