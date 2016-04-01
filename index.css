@@ -13,9 +13,16 @@ h2 {
   
 }
 
-#container {
+#container1B {
   margin-left: auto;
   margin-right: auto;
   width:300px;
+  
+}
+
+#container2B {
+  margin-left: auto;
+  margin-right: auto;
+  width:600px;
   
 }
