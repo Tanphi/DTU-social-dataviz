@@ -27,6 +27,7 @@
 	
 	
 	<h2>Assignment 2A: Simple SVG stuff</h2>
+	<div id="container">
     <svg>
 		<rect x="0" y="60" width="80" height="80" fill="purple" opacity="1" stroke="gray" stroke-width="2"></rect> 
 		<rect x="50" y="45" width="80" height="80" fill="blue" opacity="0.9" stroke="gray" stroke-width="2"></rect>
@@ -34,7 +35,7 @@
 		<rect x="150" y="15" width="80" height="80" fill="yellow" opacity="0.7" stroke="gray" stroke-width="2"></rect>
 		<rect x="200" y="0" width="80" height="80" fill="red" opacity="0.6" stroke="gray" stroke-width="2"></rect>
 	</svg>
-	
+	</div>
 	
 	<h2>Assignment 2B: One scatter plot and two datasets</h2>
 	<p id="text2B">In this section we visualize the occurrences of Prostitution and Vehicle Theft crimes, as well as the total number of crimes in San Francisco’s neighborhoods, both in 2003 and 2015. </br>
@@ -43,7 +44,7 @@
 	<p id="p2003">Click here to see data from 2003</p>
 	<p id="p2015">Click here to see data from 2015</p>
       
-      <div id="container">
+      
 	<script type="text/javascript">
         //Width and height
 			var w = 600;
@@ -238,7 +239,6 @@
 		
       </script>
       
-      </div>
       
       <p id="text2B">If the axes were different for the 2003 and the 2015 plots, we could have trouble seeing the evolution of crimes.
       The axes would adapt to the maximum of crimes occurrences for the considered year, and thus it won’t catch the evolution « visually », but only on the numbers along the axes.</br>
