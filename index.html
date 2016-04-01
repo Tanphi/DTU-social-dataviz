@@ -44,9 +44,6 @@
 	<p id="text2B">In this section we visualize the occurrences of Prostitution and Vehicle Theft crimes, as well as the total number of crimes in San Francisco’s neighborhoods, both in 2003 and 2015. </br></br>
 	The circles have their radius proportional to the total number of crimes in a given neighborhood for the considered year, which helps us spotting the most « dangerous » places.
 	We put an emphasis on two types of crimes in order to see in which neighborhoods these crimes are most likely to occur.</p>
-	<p id="p2003">Click here to see data from 2003</p>
-	<p id="p2015">Click here to see data from 2015</p>
-      
       
 	<script type="text/javascript">
         //Width and height
@@ -79,7 +76,6 @@
 			
 			//Initial dataset
 			var dataset = datasetG.d2003;
-			
 			//Find max values for scales
 			//Take the greatest value of the two max for each year
 			var maxX = Math.max(d3.max(datasetG.d2003, function(d) { return d.prostitution; }),      d3.max(datasetG.d2015, function(d) { return d.prostitution; }));
@@ -192,25 +188,21 @@
 			    .attr("fill", "DarkGray");
 
 				
-				
+			function Click2003(){
+				dataset = datasetG.d2003;
+				Update();
+			 }
+			 
+			 function Click2015(){
+				dataset = datasetG.d2015;
+				Update();
+			 }
+			
 			
 			//On click, change the dataset and update 
-			d3.selectAll("p")
-				.on("click", function() {
-					//See which p was clicked
-					var paragraphID = d3.select(this).attr("id");
+			 function Update() {
 					
-					//Select the new dataset
-					if (paragraphID == "p2003") {
-						dataset = datasetG.d2003;
-					};
-					
-					if (paragraphID == "p2015") {
-						dataset = datasetG.d2015;
-					};
-		
 					//Update…
-					
 					//Update all circles
 					svg.selectAll("circle")
 					   .data(dataset)
@@ -225,22 +217,25 @@
 					   .attr("r", function(d) {
 							return rScale(d.crime_tot);
 					   });
-					 
+					
 					//Update all labels
 					svg.selectAll("text")
 					   .data(dataset)
 					   .transition()
 					   .duration(1000)
 					   .attr("x", function(d) {
-			   		return xScale(d.prostitution) + rScale(d.crime_tot) + 2;
+							return xScale(d.prostitution) + rScale(d.crime_tot) + 2;
 					   })
 					   .attr("y", function(d) {
 							return yScale(d.vehicle_theft) + 4;
 					   })
 					 
-				});
+				};
 	
       </script>
+	  <p></p>
+	  <button onclick="Click2003();">Data from 2003</button>
+	  <button onclick="Click2015();">Data from 2015</button>
       
       
       <p id="text2B">If the axes were different for the 2003 and the 2015 plots, we could have trouble seeing the evolution of crimes.
@@ -354,25 +349,13 @@
 			   
 			   
 			  
-
-
-		
-
-			 function ClickFirst(){
-				dataset2 = dataset2G.first;
-				Update2();
-			 }
-			 
-			 function ClickSecond(){
-				dataset2 = dataset2G.second;
-				Update2();
-			 }
-			
 			//Update the rect and the texts	
 			function Update2(){
 					//Update scale domains
-					xScale2.domain(d3.range(dataset2.length));
+					//xScale2.domain(d3.range(dataset2.length));
 					yScale2.domain([0, d3.max(dataset2, function(d) { return d.value; })]);
+					
+					//xAxis2 = d3.svg.axis().scale(xScale2);
 					//Select…
 					var bars = svg2.selectAll("rect")
 						.data(dataset2, key);
@@ -413,9 +396,6 @@
 					
 					
 					//Update all labels
-					//
-					//Exercise: Modify this code to remove the correct label each time!
-					//
 					var texts = svg2.selectAll("text")
 						.data(dataset2, key);
 					
@@ -450,6 +430,11 @@
 						.duration(500)
 						.attr("x", -xScale2.rangeBand())
 						.remove();
+						
+					svg2.append("g")
+				.attr("class", "axis")
+				.attr("transform", "translate(0," + (h - padding) + ")")
+				.call(xAxis2);
 				};
 		
 			function choice(typeForm){
@@ -467,9 +452,6 @@
 			}
 		
 		</script>
-		<p></p><p></p>
-		<button onclick="ClickFirst();">Click me !</button>
-		<button onclick="ClickSecond();">Click me 2 !</button>
 		<p></p>
 		<form name="typeForm">
 		<select name="box1" onChange="choice(this.form)">
@@ -481,32 +463,32 @@
 		<h2>Assignment 2D: Visualizing geodata</h2>
 		
 		<script type="text/javascript">
-
+		
 			//Width and height
-			var w = 500;
-			var h = 500;
+			var w3 = 500;
+			var h3 = 500;
 
 			//Define map projection
 			var projection = d3.geo.mercator()
 								.center([-122.433701, 37.767683])
 								.scale(150000)
-								.translate([w / 2, h / 2]);
+								.translate([w3 / 2, h3 / 2]);
 
 			//Define path generator
 			var path = d3.geo.path()
 							 .projection(projection);
 
 			//Create SVG element
-			var svg = d3.select("body")
+			var svg3 = d3.select("body")
 						.append("svg")
-						.attr("width", w)
-						.attr("height", h);
+						.attr("width", w3)
+						.attr("height", h3);
 
 			//Load in GeoJSON data
 			d3.json("sfpddistricts.json", function(json) {
 				
 				//Bind data and create one path per GeoJSON feature
-				svg.selectAll("path")
+				svg3.selectAll("path")
 				   .data(json.features)
 				   .enter()
 				   .append("path")
@@ -516,7 +498,7 @@
 				d3.csv("K2/K-means2.csv", function(data) {	
 			
 				
-						svg.selectAll("circle")
+						svg3.selectAll("circle")
 						   .data(data)
 						   .enter()
 						   .append("circle")
@@ -533,7 +515,7 @@
 						//Load in center of clusters
 						d3.csv("K2/Centers2.csv", function(data) {							
 						
-							svg.selectAll("rect")
+							svg3.selectAll("rect")
 							   .data(data)
 							   .enter()
 							   .append("circle")
@@ -551,16 +533,7 @@
 						});
 				});
 				
-			});	
-			
-			
-			
-			
-				
-				
-			
-			
-			
+			});
 			
 			
 		</script>
