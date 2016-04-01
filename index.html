@@ -505,49 +505,54 @@
 				   .append("path")
 				   .attr("d", path)
 				   .style("fill", "steelblue");
-		
-			});
+				
+				d3.csv("K2/K-means2.csv", function(data) {	
 			
-			d3.csv("K2/K-means2.csv", function(data) {
 				
-				svg.selectAll("circle")
-				   .data(data)
-				   .enter()
-				   .append("circle")
-				   .attr("cx", function(d) {
-					   return projection([d.lon, d.lat])[0];
-				   })
-				   .attr("cy", function(d) {
-					   return projection([d.lon, d.lat])[1];
-				   })
-				   .attr("r", 4)
-				   .style("opacity", 0.75)
-					.attr("fill", function(d) { return "rgb(" + ((d.nb +1)* 50)+ ","+((5 - d.nb) * 50) +","+((d.nb) * 50)  + ")"; });
+						svg.selectAll("circle")
+						   .data(data)
+						   .enter()
+						   .append("circle")
+						   .attr("cx", function(d) {
+							   return projection([d.lon, d.lat])[0];
+						   })
+						   .attr("cy", function(d) {
+							   return projection([d.lon, d.lat])[1];
+						   })
+						   .attr("r", 4)
+						   .style("opacity", 10)
+							.attr("fill", function(d) { return "rgb(" + ((d.nb +1)* 50)+ ","+((5 - d.nb) * 50) +","+((d.nb) * 50)  + ")"; });
+						
+						//Load in center of clusters
+						d3.csv("K2/Centers2.csv", function(data) {							
+						
+							svg.selectAll("rect")
+							   .data(data)
+							   .enter()
+							   .append("circle")
+							   .attr("cx", function(d) {
+								   return projection([d.lon, d.lat])[0];
+							   })
+							   .attr("cy", function(d) {
+								   return projection([d.lon, d.lat])[1];
+							   })
+							   .attr("r", 10)
+								.attr("fill", function(d) { return "rgb(" + ((d.nb +1)* 52)+ ","+((5 - d.nb) * 52) +","+((d.nb) * 52)  + ")"; })
+								.attr("stroke-width", 3)
+								.attr("stroke", "black");
+					
+						});
+				});
 				
-			});
+			});	
 			
-			//Load in cities data
-			d3.csv("K2/Centers2.csv", function(data) {
+			
+			
+			
 				
-				svg.selectAll("circle")
-				   .data(data)
-				   .enter()
-				   .append("circle")
-				   .attr("cx", function(d) {
-					   return projection([d.lon, d.lat])[0];
-				   })
-				   .attr("cy", function(d) {
-					   return projection([d.lon, d.lat])[1];
-				   })
-				   .attr("r", 10)
-				   .style("opacity", 0.75)
-					.attr("stroke", "black")
-					.attr("stroke-width", function(d) {
-						return d/2;
-					})
-					.attr("fill", function(d) { return "rgb(" + ((d.nb +1)* 50)+ ","+((5 - d.nb) * 50) +","+((d.nb) * 50)  + ")"; });
 				
-			});
+			
+			
 			
 			
 			
