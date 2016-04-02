@@ -513,10 +513,13 @@
 				
 			});
 			
-			drawMap("K2/Centers2.csv","K2/K-means2.csv")
+			drawMap("K2/K-means2.csv", "K2/Centers2.csv");						
 			
-			function drawMap(center, kmean){
-				svg3.exit().remove();
+			function drawMap(kmean, centers)
+			{
+			
+				svg3.selectAll("circle").remove();
+				
 				d3.csv(kmean, function(data) {				
 						svg3.selectAll("circle")
 						   .data(data)
@@ -532,7 +535,7 @@
 							.attr("fill", function(d) { return "rgb(" + ((d.nb +1)* 50)+ ","+((5 - d.nb) * 50) +","+((d.nb) * 50)  + ")"; });
 						
 						//Load in center of clusters
-						d3.csv(center, function(data) {							
+						d3.csv(centers, function(data) {							
 						
 							svg3.selectAll("rect")
 							   .data(data)
@@ -551,10 +554,25 @@
 					
 						});
 				});						
+						
+						
 			}
 			
+			
+			function Click1(){
+				drawMap("K1/K-means2.csv", "K2/Centers2.csv");
+			}
 			function Click2(){
-				drawMap("K3/Centers3.csv","K3/K-means3.csv")
+				drawMap("K3/K-means3.csv", "K3/Centers3.csv");
+			}
+			function Click3(){
+				drawMap("K4/K-means4.csv", "K4/Centers4.csv");
+			}
+			function Click4(){
+				drawMap("K5/K-means5.csv", "K5/Centers5.csv");
+			}
+			function Click5(){
+				drawMap("K6/K-means6.csv", "K6/Centers6.csv");
 			}
 			
 			
