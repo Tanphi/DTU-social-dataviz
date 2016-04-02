@@ -27,3 +27,8 @@ h1,h2 {
   
 }
 
+svg{
+    display: block;
+    margin: auto;
+}
+
