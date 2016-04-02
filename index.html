@@ -509,11 +509,15 @@
 				   .enter()
 				   .append("path")
 				   .attr("d", path)
-				   .style("fill", "steelblue");
+				   .style("fill", "steelblue");				
 				
-				d3.csv("K2/K-means2.csv", function(data) {	
+			});
 			
-				
+			drawMap("K2/Centers2.csv","K2/K-means2.csv")
+			
+			function drawMap(center, kmean){
+				svg3.exit().remove();
+				d3.csv(kmean, function(data) {				
 						svg3.selectAll("circle")
 						   .data(data)
 						   .enter()
@@ -525,11 +529,10 @@
 							   return projection([d.lon, d.lat])[1];
 						   })
 						   .attr("r", 4)
-						   .style("opacity", 10)
 							.attr("fill", function(d) { return "rgb(" + ((d.nb +1)* 50)+ ","+((5 - d.nb) * 50) +","+((d.nb) * 50)  + ")"; });
 						
 						//Load in center of clusters
-						d3.csv("K2/Centers2.csv", function(data) {							
+						d3.csv(center, function(data) {							
 						
 							svg3.selectAll("rect")
 							   .data(data)
@@ -547,18 +550,21 @@
 								.attr("stroke", "black");
 					
 						});
-				});
-				
-			});
+				});						
+			}
+			
+			function Click2(){
+				drawMap("K3/Centers3.csv","K3/K-means3.csv")
+			}
 			
 			
 		</script>
 		<p></p><p></p>
 		<button onclick="Click1();">Click to k2</button>
 		<button onclick="Click2();">Click to k3</button>
-		<button onclick="Click2();">Click to k4</button>
-		<button onclick="Click2();">Click to k5</button>
-		<button onclick="Click2();">Click to k6</button>
+		<button onclick="Click3();">Click to k4</button>
+		<button onclick="Click4();">Click to k5</button>
+		<button onclick="Click5();">Click to k6</button>
 		<p></p>
   </body>
 </html>
