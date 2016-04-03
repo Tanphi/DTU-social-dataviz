@@ -102,99 +102,99 @@
 [
   {
     "hour": 0,
-    "nCrime": 941
+    "nCrime": 1284
   },
   {
     "hour": 1,
-    "nCrime": 684
+    "nCrime": 1008
   },
   {
     "hour": 2,
-    "nCrime": 621
+    "nCrime": 74
   },
   {
     "hour": 3,
-    "nCrime": 353
+    "nCrime": 51
   },
   {
     "hour": 4,
-    "nCrime": 253
+    "nCrime": 452
   },
   {
     "hour": 5,
-    "nCrime": 142
+    "nCrime": 571
   },
   {
     "hour": 6,
-    "nCrime": 209
+    "nCrime": 513
   },
   {
     "hour": 7,
-    "nCrime": 358
+    "nCrime": 265
   },
   {
     "hour": 8,
-    "nCrime": 508
+    "nCrime": 147
   },
   {
     "hour": 9,
-    "nCrime": 662
+    "nCrime": 158
   },
   {
     "hour": 10,
-    "nCrime": 670
+    "nCrime": 181
   },
   {
     "hour": 11,
-    "nCrime": 789
+    "nCrime": 173
   },
   {
     "hour": 12,
-    "nCrime": 916
+    "nCrime": 323
   },
   {
     "hour": 13,
-    "nCrime": 899
+    "nCrime": 321
   },
   {
     "hour": 14,
-    "nCrime": 907
+    "nCrime": 25
   },
   {
     "hour": 15,
-    "nCrime": 1022
+    "nCrime": 179
   },
   {
     "hour": 16,
-    "nCrime": 1102
+    "nCrime": 216
   },
   {
     "hour": 17,
-    "nCrime": 1057
+    "nCrime": 546
   },
   {
     "hour": 18,
-    "nCrime": 1150
+    "nCrime": 111
   },
   {
     "hour": 19,
-    "nCrime": 1055
+    "nCrime": 1296
   },
   {
     "hour": 20,
-    "nCrime": 1001
+    "nCrime": 103
   },
   {
     "hour": 21,
-    "nCrime": 984
+    "nCrime": 123
   },
   {
     "hour": 22,
-    "nCrime": 1076
+    "nCrime": 1522
   },
   {
     "hour": 23,
-    "nCrime": 1004
+    "nCrime": 1538
   }
 ]
 ,"DRIVING":

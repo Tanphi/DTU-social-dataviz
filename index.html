@@ -251,10 +251,10 @@
 	</br></br>
 
 		<script type="text/javascript">
-			
+					
 			var dataset2G = JSON.parse(readTextFile("data2C.json"));
 							
-			var dataset2 = dataset2G.PROSTITUTION;
+			var dataset2 = dataset2G.WEAPON;
 			
 			var xScale2 = d3.scale.ordinal()
 							.domain(d3.range(dataset2.length))
@@ -403,6 +403,9 @@
 					//Update…
 					texts.transition()
 						.duration(500)
+						.text(function(d) {
+					   		return d.nCrime;
+						})
 						.attr("x", function(d, i) {
 							return xScale2(i)  + xScale2.rangeBand() /2;
 						})
@@ -426,10 +429,10 @@
 				var i = typeForm.box1.selectedIndex;
 				switch(i){
 				case 0:
-					dataset2 = dataset2G.PROSTITUTION;
+					dataset2 = dataset2G.WEAPON;
 					break;
 				case 1:
-					dataset2 = dataset2G.WEAPON;
+					dataset2 = dataset2G.PROSTITUTION;
 					break;
 				case 2:
 					dataset2 = dataset2G.DRIVING;
@@ -468,8 +471,8 @@
 		<div align="center">
 			<form name="typeForm">
 			<select name="box1" onChange="choice(this.form)">
-			<option selected>PROSTITUTION</option>
-			<option>WEAPON LAWS</option>
+			<option selected>WEAPON LAWS</option>
+			<option>PROSTITUTION</option>
 			<option>DRIVING UNDER THE INFLUENCE</option>
 			<option>ROBBERY</option>
 			<option>BURGLARY</option>
