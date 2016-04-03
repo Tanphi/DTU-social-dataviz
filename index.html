@@ -285,7 +285,7 @@
 				.attr("transform", "translate(0," + (h - padding) + ")")
 				.call(xAxis2);
 
-				   
+			
 			
 			//Define key function, to be used when binding data
 			var hour = function(d) {
@@ -527,11 +527,13 @@
 				   .enter()
 				   .append("path")
 				   .attr("d", path)
-				   .style("fill", "steelblue");				
+				   .style("fill", "steelblue");		
+
+				drawMap("K2/K-means2.csv", "K2/Centers2.csv");	
 				
 			});
 			
-			drawMap("K2/K-means2.csv", "K2/Centers2.csv");						
+								
 			
 			function drawMap(kmean, centers)
 			{
