@@ -41,19 +41,18 @@
 	</br></br>
 	
 	<h2>Assignment 2B: One scatter plot and two datasets</h2>
-	<p id="text2B">In this section we visualize the occurrences of Prostitution and Vehicle Theft crimes, as well as the total number of crimes in San Francisco’s neighborhoods, both in 2003 and 2015. </br></br>
-	The circles have their radius proportional to the total number of crimes in a given neighborhood for the considered year, which helps us spotting the most « dangerous » places.
-	We put an emphasis on two types of crimes in order to see in which neighborhoods these crimes are most likely to occur.</p>
+	<p id="text2B">In this section the occurrences of Prostitution and Vehicle Theft crimes are shown, as well as the total number of crimes in San Francisco’s neighborhoods, both in 2003 and 2015. </br></br>
+	The circles have their radius proportional to the total number of crimes in a given district for the considered year.
+	The emphasis was put on two types of crimes in order to see in which district these crimes are most likely to occur.</p>
       
 	<script type="text/javascript">
-        //Width and height
+			//Width and height
 			var w = 600;
 			var h = 380;
 			var padding = 60;
 			
-			
-			//read a file, here for our local dataset
-			function readTextFile(file)
+			//Read a file, here for our local dataset
+			function ReadTextFile(file)
 			{
 				var rawFile = new XMLHttpRequest();
 				rawFile.open("GET", file, false);
@@ -72,11 +71,12 @@
 			};
 			
 			//Read our local data file and parse it to JSON			
-			var datasetG = JSON.parse(readTextFile("data2B.json"));
+			var datasetG = JSON.parse(ReadTextFile("data2B.json"));
 			
 			//Initial dataset
 			var dataset = datasetG.d2003;
-			//Find max values for scales
+			
+			//Find max values for the scales
 			//Take the greatest value of the two max for each year
 			var maxX = Math.max(d3.max(datasetG.d2003, function(d) { return d.prostitution; }),      d3.max(datasetG.d2015, function(d) { return d.prostitution; }));
 			
@@ -187,7 +187,8 @@
 			    .attr("font-size", "15px")
 			    .attr("fill", "DarkGray");
 
-				
+			
+			//After a click of a button, the dataset is changed and the svg updated
 			function Click2003(){
 				dataset = datasetG.d2003;
 				Update();
@@ -240,24 +241,26 @@
 	</div>
       
       
-      <p id="text2B">If the axes were different for the 2003 and the 2015 plots, we could have trouble seeing the evolution of crimes.
+      <p id="text2B">If the axes were different for the 2003 and the 2015 plots, the absolute evolution of crimes would have been less evident.
       The axes would adapt to the maximum of crimes occurrences for the considered year, and thus it won’t catch the evolution « visually », but only on the numbers along the axes.</br></br>
       By having the axes to be the same from a plot to the other, it is much easier to see the trend.</p>
 	
 	</br></br>
 	
-	<h2 id = "subtitle">Assignment 2C: One barchart and (at least) two datasets</h2>
-	<p id="text2C"> On this figure, we are showing the number of crime per hour, for each different type of crime. The pulldown menu allows the user to navigate between the 14 different kind of crimes.</p>
+	<h2>Assignment 2C: One barchart and (at least) two datasets</h2>
+	<p id="text2C"> On this figure, the number of occurences per hour for each different type of crime. The pulldown menu allows the user to navigate between the 14 different kinds of crimes.</p>
 	</br></br>
 
 		<script type="text/javascript">
 		
 			padding2 = 1;
-					
-			var dataset2G = JSON.parse(readTextFile("data2C.json"));
-							
+			
+			//Load the general dataset from the file, and set the initial dataset
+			var dataset2G = JSON.parse(ReadTextFile("data2C.json"));
+		
 			var dataset2 = dataset2G.WEAPON;
 			
+			//Define the scales
 			var xScale2 = d3.scale.ordinal()
 							.domain(d3.range(dataset2.length))
 							.rangeRoundBands([padding2, w - padding2], 0.05);
@@ -285,7 +288,6 @@
 				.attr("transform", "translate(0," + (h - padding) + ")")
 				.call(xAxis2);
 
-			
 			
 			//Define key function, to be used when binding data
 			var hour = function(d) {
@@ -336,10 +338,9 @@
 			  
 			//Update the rect and the texts	
 			function Update2(){
-					//Update scale domains
+					//Update scale domain
 					yScale2.domain([0, d3.max(dataset2, function(d) { return d.nCrime; })]);
 					
-					//xAxis2 = d3.svg.axis().scale(xScale2);
 					//Select…
 					var bars = svg2.selectAll("rect")
 						.data(dataset2, hour);
@@ -358,6 +359,7 @@
 						.attr("fill", function(d) {
 							return "rgb(0, 0, " + (d.nCrime * 10) + ")";
 						});
+					
 					//Update…
 					bars.transition()
 						.duration(500)
@@ -374,13 +376,13 @@
 						.attr("fill", function(d) {
 							return "rgb(0, 0, " + yScale2(d.nCrime) + ")";
 					   });
+					  
 					//Exit…
 					bars.exit()
 						.transition()
 						.duration(500)
 						.attr("x", -xScale2.rangeBand())
 						.remove();
-					
 					
 					//Update all labels
 					var texts = svg2.selectAll("text")
@@ -402,6 +404,7 @@
 					   .attr("font-family", "sans-serif")
 					   .attr("font-size", "11px")
 					   .attr("fill", "white");
+					   
 					//Update…
 					texts.transition()
 						.duration(500)
@@ -414,21 +417,22 @@
 						.attr("y", function(d) {
 							return h - yScale2(d.nCrime) + 14 - padding;
 						});
+						
 					//Exit…
 					texts.exit()
-						//.transition()
-						//.duration(500)
 						.attr("x", -xScale2.rangeBand())
 						.remove();
-						
+					
+					//Update the X axis
 					svg2.append("g")
-				.attr("class", "axis")
-				.attr("transform", "translate(0," + (h - padding) + ")")
-				.call(xAxis2);
+						.attr("class", "axis")
+						.attr("transform", "translate(0," + (h - padding) + ")")
+						.call(xAxis2);
 				};
 		
+			//After a change in thepulldown menu, choose the new dataset and update the chart
 			function choice(typeForm){
-				var i = typeForm.box1.selectedIndex;
+				var i = typeForm.box1.selectedIndex; //read the selected crime
 				switch(i){
 				case 0:
 					dataset2 = dataset2G.WEAPON;
@@ -464,7 +468,6 @@
 					dataset2 = dataset2G.DISORDER;
 					break;
 				}
-				
 				Update2();
 			}
 		
@@ -472,29 +475,29 @@
 		<p></p>
 		<div align="center">
 			<form name="typeForm">
-			<select name="box1" onChange="choice(this.form)">
-			<option selected>WEAPON LAWS</option>
-			<option>PROSTITUTION</option>
-			<option>DRIVING UNDER THE INFLUENCE</option>
-			<option>ROBBERY</option>
-			<option>BURGLARY</option>
-			<option>ASSAULT</option>
-			<option>DRUG</option>
-			<option>TRESPASS</option>
-			<option>VEHICLE THEFT</option>
-			<option>STOLEN PROPERTY</option>
-			<option>DISORDERLY CONDUCT</option>
-			</select>
+				<select name="box1" onChange="choice(this.form)">
+					<option selected>WEAPON LAWS</option>
+					<option>PROSTITUTION</option>
+					<option>DRIVING UNDER THE INFLUENCE</option>
+					<option>ROBBERY</option>
+					<option>BURGLARY</option>
+					<option>ASSAULT</option>
+					<option>DRUG</option>
+					<option>TRESPASS</option>
+					<option>VEHICLE THEFT</option>
+					<option>STOLEN PROPERTY</option>
+					<option>DISORDERLY CONDUCT</option>
+				</select>
 			</form>
 		</div>
 		
 		<h2>Assignment 2D: Visualizing geodata</h2>
 		<p>
-		In this section, we explore K-mean clustering, for the location of all the prostitution crimes that have occured in San Francisco between 2003 and 2015. 
+		In this section, K-mean clustering is used for the location of all the prostitution crimes that have occured in San Francisco between 2003 and 2015. 
 		<br></br>
-		The k-mean algorithm has been done using python, and the original code can be seen on <a href="http://nbviewer.jupyter.org/github/tanphi/tanphi.github.io/blob/master/k-means%20clustering.ipynb">this page</a>. It has been tried for different number of clusters, from 2 to 6. The different results are present on the graphic below: the buttons can be used to navigate between the different clusterings. 
+		The k-mean algorithm has been done using python, and the original code can be seen on <a href="http://nbviewer.jupyter.org/github/tanphi/tanphi.github.io/blob/master/k-means%20clustering.ipynb">this page</a>. It has been tried for different number of clusters, from 2 to 6. The different results are present on the graphic below: the buttons allow to navigate between the different clusterings. 
 		<br></br>
-		The visualisation presented below is based on the csv file obtained from the python code. It was important to try to minimize the size of those files, as they are loaded for the vizualisation. If the size is too big, the loading would take too much time, and navigation would not be fluid enough.
+		The visualisation presented below is based on the csv file obtained from the python code. It was important to try to minimize the size of those files, as they are loaded for the vizualisation. If the size was too big, the loading would take too much time, and navigation would not be fluid enough.
 		</p>
 		<script type="text/javascript">
 		
