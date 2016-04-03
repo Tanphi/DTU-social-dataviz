@@ -251,6 +251,8 @@
 	</br></br>
 
 		<script type="text/javascript">
+		
+			padding2 = 1;
 					
 			var dataset2G = JSON.parse(readTextFile("data2C.json"));
 							
@@ -258,7 +260,7 @@
 			
 			var xScale2 = d3.scale.ordinal()
 							.domain(d3.range(dataset2.length))
-							.rangeRoundBands([padding, w - padding], 0.05);
+							.rangeRoundBands([padding2, w - padding2], 0.05);
 							
 							
 			var yScale2 = d3.scale.linear()
